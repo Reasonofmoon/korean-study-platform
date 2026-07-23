@@ -9,6 +9,7 @@ var subjects = page.subjects || [];
   <h1 id="level-title"><%= page.title %></h1>
   <p><%= page.description %></p>
   <div class="topic-summary"><strong><%= lessons.length %></strong><span>개 레슨</span><span><%= page.summary %></span></div>
+  <% if (page.curriculum_link) { %><a class="button" href="<%- url_for(page.curriculum_link) %>"><%= page.curriculum_label %></a><% } %>
 </section>
 
 <section class="section" data-filter-root aria-labelledby="lesson-title">
