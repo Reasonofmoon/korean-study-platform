@@ -22,6 +22,20 @@
       "source_file": "source/high-2028/literature-2015/index.md"
     },
     {
+      "id": "creator:ff696c8d3f16",
+      "label": "권정생",
+      "file_type": "concept",
+      "kind": "creator",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
+      "id": "creator:84c01e550e9b",
+      "label": "금희",
+      "file_type": "concept",
+      "kind": "creator",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "creator:ae05ccb40cb5",
       "label": "김만중",
       "file_type": "concept",
@@ -29,11 +43,25 @@
       "source_file": "source/high-2028/literature-2015/index.md"
     },
     {
+      "id": "creator:b81a4adfbcf4",
+      "label": "김소월",
+      "file_type": "concept",
+      "kind": "creator",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "creator:b6271ab36c8a",
       "label": "김수영",
       "file_type": "concept",
       "kind": "creator",
       "source_file": "source/high-2028/literature-reading-2/index.md"
+    },
+    {
+      "id": "creator:c679ea59ee9c",
+      "label": "김시습",
+      "file_type": "concept",
+      "kind": "creator",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "creator:d200057af9ae",
@@ -57,6 +85,13 @@
       "source_file": "source/high-2028/literature-2015/index.md"
     },
     {
+      "id": "creator:cbbd4f4746a7",
+      "label": "김혜순",
+      "file_type": "concept",
+      "kind": "creator",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "creator:85961e4f1df6",
       "label": "김훈",
       "file_type": "concept",
@@ -76,6 +111,13 @@
       "file_type": "concept",
       "kind": "creator",
       "source_file": "source/high-2028/literature-reading-2/index.md"
+    },
+    {
+      "id": "creator:2568750acdf0",
+      "label": "두보",
+      "file_type": "concept",
+      "kind": "creator",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "creator:a766d95be1c5",
@@ -104,6 +146,13 @@
       "file_type": "concept",
       "kind": "creator",
       "source_file": "source/high-2028/literature-reading-2/index.md"
+    },
+    {
+      "id": "creator:35098f94a6bc",
+      "label": "박완서",
+      "file_type": "concept",
+      "kind": "creator",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "creator:82691cb9fd2a",
@@ -146,6 +195,20 @@
       "file_type": "concept",
       "kind": "creator",
       "source_file": "source/high-2028/literature-2015/index.md"
+    },
+    {
+      "id": "creator:c90ae1c84f7c",
+      "label": "싱고",
+      "file_type": "concept",
+      "kind": "creator",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
+      "id": "creator:6934b3e85a8b",
+      "label": "앵무 만화",
+      "file_type": "concept",
+      "kind": "creator",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "creator:769a2045d4cc",
@@ -216,6 +279,13 @@
       "file_type": "concept",
       "kind": "creator",
       "source_file": "source/high-2028/literature-2015/index.md"
+    },
+    {
+      "id": "creator:b9fa3bd1e37d",
+      "label": "이색",
+      "file_type": "concept",
+      "kind": "creator",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "creator:10b0ec5de7bb",
@@ -323,6 +393,20 @@
       "source_file": "source/high-2028/literature-2015/index.md"
     },
     {
+      "id": "creator:a475467fbb22",
+      "label": "함민복",
+      "file_type": "concept",
+      "kind": "creator",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
+      "id": "creator:72ff64ec89e9",
+      "label": "현진건",
+      "file_type": "concept",
+      "kind": "creator",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "creator:49f0a825d1a5",
       "label": "혜경궁 홍씨",
       "file_type": "concept",
@@ -379,6 +463,13 @@
       "source_file": "source/high-2028/literature-reading-2/index.md"
     },
     {
+      "id": "map:24be3baa4313",
+      "label": "문학 확장 읽기 지도",
+      "file_type": "concept",
+      "kind": "learning_map",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "path:high-2028",
       "label": "고등 2028 문학",
       "file_type": "concept",
@@ -407,6 +498,13 @@
       "source_file": "source/high-2028/literature-reading-2/index.md"
     },
     {
+      "id": "lens:fb7e2f18f1fb",
+      "label": "무대·매체와 재구성",
+      "file_type": "concept",
+      "kind": "reading_lens",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "lens:c9ba29c72186",
       "label": "무대와 매체",
       "file_type": "concept",
@@ -428,11 +526,25 @@
       "source_file": "source/high-2028/literature-reading-2/index.md"
     },
     {
+      "id": "lens:530308c0d09d",
+      "label": "사물·자연과 감각",
+      "file_type": "concept",
+      "kind": "reading_lens",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "lens:624a4ce94547",
       "label": "사회와 관계",
       "file_type": "concept",
       "kind": "reading_lens",
       "source_file": "source/high-2028/literature-2015/index.md"
+    },
+    {
+      "id": "lens:4357a9087c32",
+      "label": "삶과 판단",
+      "file_type": "concept",
+      "kind": "reading_lens",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "lens:6c4a07aa0fe4",
@@ -449,6 +561,13 @@
       "source_file": "source/high-2028/literature-2015/index.md"
     },
     {
+      "id": "lens:07de45244fd9",
+      "label": "인물·기억과 서사",
+      "file_type": "concept",
+      "kind": "reading_lens",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "lens:68d96f166ce1",
       "label": "인물과 사건",
       "file_type": "concept",
@@ -456,11 +575,25 @@
       "source_file": "source/high-2028/literature-reading-2/index.md"
     },
     {
+      "id": "lens:fff625cfcc2a",
+      "label": "전승·고전의 형식",
+      "file_type": "concept",
+      "kind": "reading_lens",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "work:45b7e31537e3",
       "label": "개밥바라기 별",
       "file_type": "concept",
       "kind": "work",
       "source_file": "source/high-2028/literature-2015/index.md"
+    },
+    {
+      "id": "work:b7f767241b83",
+      "label": "고향",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "work:b960dbcd38b4",
@@ -482,6 +615,13 @@
       "file_type": "concept",
       "kind": "work",
       "source_file": "source/high-2028/literature-reading-2/index.md"
+    },
+    {
+      "id": "work:cb6ba5f69ed4",
+      "label": "국수",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "work:256fd7688053",
@@ -547,6 +687,20 @@
       "source_file": "source/high-2028/literature-reading-2/index.md"
     },
     {
+      "id": "work:fc722478e00e",
+      "label": "납작납작-박수근 화법을 위하여",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
+      "id": "work:bb20e5987fc7",
+      "label": "내가 그린 히말라야시다 그림",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "work:563b33a13669",
       "label": "너와 나만의 시간",
       "file_type": "concept",
@@ -559,6 +713,20 @@
       "file_type": "concept",
       "kind": "work",
       "source_file": "source/high-2028/literature-2015/index.md"
+    },
+    {
+      "id": "work:26f1aa8d42f6",
+      "label": "님이 오마 하거늘",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
+      "id": "work:d62447373861",
+      "label": "동곡칠가 4",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "work:962c18c7a48f",
@@ -624,6 +792,20 @@
       "source_file": "source/high-2028/literature-2015/index.md"
     },
     {
+      "id": "work:4f7cf91655df",
+      "label": "백설이 ᄌᆞ자진",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
+      "id": "work:09b8fe389fcb",
+      "label": "별 헤는 밤",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "work:c77abd56cc2f",
       "label": "봉산탈춤",
       "file_type": "concept",
@@ -650,6 +832,27 @@
       "file_type": "concept",
       "kind": "work",
       "source_file": "source/high-2028/literature-reading-2/index.md"
+    },
+    {
+      "id": "work:01271a80a2b5",
+      "label": "빼떼기",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
+      "id": "work:36e5ffd6d4b3",
+      "label": "사과를 먹으며",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
+      "id": "work:3b8613e39259",
+      "label": "사랑",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "work:d19846da1648",
@@ -680,11 +883,32 @@
       "source_file": "source/high-2028/literature-2015/index.md"
     },
     {
+      "id": "work:8cac1b9830e5",
+      "label": "산유화",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "work:e2470628bc7c",
       "label": "서경별곡",
       "file_type": "concept",
       "kind": "work",
       "source_file": "source/high-2028/literature-2015/index.md"
+    },
+    {
+      "id": "work:186310894318",
+      "label": "서로에게 길들여진다는 것",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
+      "id": "work:de7bd21371b9",
+      "label": "세상에 없는 나의 집",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "work:b29953ac2573",
@@ -757,6 +981,27 @@
       "source_file": "source/high-2028/literature-2015/index.md"
     },
     {
+      "id": "work:1e9e1c5a7516",
+      "label": "엄마의 말뚝 2",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
+      "id": "work:17d821c78a5f",
+      "label": "여백을 위한 잡담",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
+      "id": "work:15f196530f45",
+      "label": "예덕선생전",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "work:4dedbcbb9789",
       "label": "원고지",
       "file_type": "concept",
@@ -785,6 +1030,20 @@
       "source_file": "source/high-2028/literature-2015/index.md"
     },
     {
+      "id": "work:592ba820d75f",
+      "label": "이생규장전",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
+      "id": "work:a23498445bd3",
+      "label": "이옥설",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
+    },
+    {
       "id": "work:5da873d76cc3",
       "label": "이춘풍전",
       "file_type": "concept",
@@ -797,6 +1056,13 @@
       "file_type": "concept",
       "kind": "work",
       "source_file": "source/high-2028/literature-2015/index.md"
+    },
+    {
+      "id": "work:a359cdbb2c50",
+      "label": "입동",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "work:df2b4a9d7c81",
@@ -825,6 +1091,13 @@
       "file_type": "concept",
       "kind": "work",
       "source_file": "source/high-2028/literature-2015/index.md"
+    },
+    {
+      "id": "work:1bacad1e51cc",
+      "label": "주몽 신화",
+      "file_type": "concept",
+      "kind": "work",
+      "source_file": "source/high-2028/literature-reading-3/index.md"
     },
     {
       "id": "work:d88b6df21e5e",
@@ -906,6 +1179,42 @@
   ],
   "edges": [
     {
+      "source": "lens:07de45244fd9",
+      "target": "work:01271a80a2b5",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:07de45244fd9",
+      "target": "work:1e9e1c5a7516",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:07de45244fd9",
+      "target": "work:592ba820d75f",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:07de45244fd9",
+      "target": "work:a359cdbb2c50",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:07de45244fd9",
+      "target": "work:b7f767241b83",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:07de45244fd9",
+      "target": "work:de7bd21371b9",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "lens:0b5ce69443e1",
       "target": "work:256fd7688053",
       "relation": "contains_work",
@@ -932,6 +1241,60 @@
     {
       "source": "lens:0b5ce69443e1",
       "target": "work:f478ab11b517",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:4357a9087c32",
+      "target": "work:15f196530f45",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:4357a9087c32",
+      "target": "work:17d821c78a5f",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:4357a9087c32",
+      "target": "work:186310894318",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:530308c0d09d",
+      "target": "work:09b8fe389fcb",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:530308c0d09d",
+      "target": "work:36e5ffd6d4b3",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:530308c0d09d",
+      "target": "work:3b8613e39259",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:530308c0d09d",
+      "target": "work:8cac1b9830e5",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:530308c0d09d",
+      "target": "work:cb6ba5f69ed4",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:530308c0d09d",
+      "target": "work:fc722478e00e",
       "relation": "contains_work",
       "confidence": "EXTRACTED"
     },
@@ -1302,6 +1665,48 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "lens:fb7e2f18f1fb",
+      "target": "work:bb20e5987fc7",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:fff625cfcc2a",
+      "target": "work:1bacad1e51cc",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:fff625cfcc2a",
+      "target": "work:26f1aa8d42f6",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:fff625cfcc2a",
+      "target": "work:4f7cf91655df",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:fff625cfcc2a",
+      "target": "work:a23498445bd3",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:fff625cfcc2a",
+      "target": "work:d62447373861",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:01271a80a2b5",
+      "target": "creator:ff696c8d3f16",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:064bb7aaa1ba",
       "target": "creator:ad48591b67aa",
       "relation": "created_by",
@@ -1310,6 +1715,12 @@
     {
       "source": "work:0951fb8140fa",
       "target": "creator:de4e172a371e",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:09b8fe389fcb",
+      "target": "creator:a0fa5dc85193",
       "relation": "created_by",
       "confidence": "EXTRACTED"
     },
@@ -1326,8 +1737,26 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:15f196530f45",
+      "target": "creator:82691cb9fd2a",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:17ca79e8e5e1",
       "target": "creator:85961e4f1df6",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:17d821c78a5f",
+      "target": "creator:0c501c5f50ae",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:186310894318",
+      "target": "creator:c90ae1c84f7c",
       "relation": "created_by",
       "confidence": "EXTRACTED"
     },
@@ -1356,6 +1785,12 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:1e9e1c5a7516",
+      "target": "creator:35098f94a6bc",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:20de5699ecfa",
       "target": "creator:7cfa98116cb8",
       "relation": "created_by",
@@ -1380,8 +1815,20 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:36e5ffd6d4b3",
+      "target": "creator:a475467fbb22",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:3aa76798e7c3",
       "target": "creator:82691cb9fd2a",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:3b8613e39259",
+      "target": "creator:b6271ab36c8a",
       "relation": "created_by",
       "confidence": "EXTRACTED"
     },
@@ -1410,6 +1857,12 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:4f7cf91655df",
+      "target": "creator:b9fa3bd1e37d",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:5316ebf7ec6d",
       "target": "creator:ebfe8340cee5",
       "relation": "created_by",
@@ -1424,6 +1877,12 @@
     {
       "source": "work:573960473903",
       "target": "creator:0c501c5f50ae",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:592ba820d75f",
+      "target": "creator:c679ea59ee9c",
       "relation": "created_by",
       "confidence": "EXTRACTED"
     },
@@ -1460,6 +1919,12 @@
     {
       "source": "work:80cf46dc4164",
       "target": "creator:a0fa5dc85193",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:8cac1b9830e5",
+      "target": "creator:b81a4adfbcf4",
       "relation": "created_by",
       "confidence": "EXTRACTED"
     },
@@ -1506,6 +1971,18 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:a23498445bd3",
+      "target": "creator:d4bd62ed949c",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:a359cdbb2c50",
+      "target": "creator:d200057af9ae",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:b29953ac2573",
       "target": "creator:4fc00e9a4db0",
       "relation": "created_by",
@@ -1518,8 +1995,26 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:b7f767241b83",
+      "target": "creator:72ff64ec89e9",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:b960dbcd38b4",
       "target": "creator:d4bd62ed949c",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:bb20e5987fc7",
+      "target": "creator:2bd0c7241f8c",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:bb20e5987fc7",
+      "target": "creator:6934b3e85a8b",
       "relation": "created_by",
       "confidence": "EXTRACTED"
     },
@@ -1538,6 +2033,12 @@
     {
       "source": "work:c7440896314e",
       "target": "creator:ef0e5e09cc2f",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:cb6ba5f69ed4",
+      "target": "creator:c87c17cf26b6",
       "relation": "created_by",
       "confidence": "EXTRACTED"
     },
@@ -1566,6 +2067,12 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:d62447373861",
+      "target": "creator:2568750acdf0",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:d88b6df21e5e",
       "target": "creator:05abf6085443",
       "relation": "created_by",
@@ -1574,6 +2081,12 @@
     {
       "source": "work:dbd3d24d4851",
       "target": "creator:b6271ab36c8a",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:de7bd21371b9",
+      "target": "creator:84c01e550e9b",
       "relation": "created_by",
       "confidence": "EXTRACTED"
     },
@@ -1644,6 +2157,18 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:fc722478e00e",
+      "target": "creator:cbbd4f4746a7",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "path:high-2028",
+      "target": "map:24be3baa4313",
+      "relation": "has_map",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "path:high-2028",
       "target": "map:268c6a06a9aa",
       "relation": "has_map",
@@ -1653,6 +2178,36 @@
       "source": "path:high-2028",
       "target": "map:cff934140827",
       "relation": "has_map",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "map:24be3baa4313",
+      "target": "lens:07de45244fd9",
+      "relation": "uses_lens",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "map:24be3baa4313",
+      "target": "lens:4357a9087c32",
+      "relation": "uses_lens",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "map:24be3baa4313",
+      "target": "lens:530308c0d09d",
+      "relation": "uses_lens",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "map:24be3baa4313",
+      "target": "lens:fb7e2f18f1fb",
+      "relation": "uses_lens",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "map:24be3baa4313",
+      "target": "lens:fff625cfcc2a",
+      "relation": "uses_lens",
       "confidence": "EXTRACTED"
     },
     {

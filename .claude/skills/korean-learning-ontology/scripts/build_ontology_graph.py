@@ -20,6 +20,7 @@ OUTPUT = SOURCE / "ontology" / "graphify"
 GUIDES = [
     SOURCE / "high-2028" / "literature-2015" / "index.md",
     SOURCE / "high-2028" / "literature-reading-2" / "index.md",
+    SOURCE / "high-2028" / "literature-reading-3" / "index.md",
 ]
 HEADING = re.compile(r"^##\s+\d+\.\s+(.+?)\s+·\s+\d+편\s*$", re.MULTILINE)
 ARTICLE = re.compile(

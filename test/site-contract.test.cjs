@@ -97,6 +97,19 @@ test("publishes a separate 32-work literature reading map without source structu
   assert.ok(guide.indexOf("어느 날 고궁을 나오면서") < guide.indexOf("두근두근 내 인생"));
 });
 
+test("publishes an independent literature expansion map without source structure", () => {
+  const guide = readGenerated(path.join("high-2028", "literature-reading-3", "index.html"));
+
+  assert.match(guide, /문학 확장 읽기 지도/);
+  assert.equal((guide.match(/class="literature-note"/g) || []).length, 21);
+  assert.match(guide, /사물·자연과 감각/);
+  assert.match(guide, /인물·기억과 서사/);
+  assert.match(guide, /전승·고전의 형식/);
+  assert.match(guide, /무대·매체와 재구성/);
+  assert.match(guide, /삽화·단원 배열/);
+  assert.doesNotMatch(guide, /2015년 개정판|창비 문학|문학의 본질|문학과 삶/);
+});
+
 test("publishes a Graphify ontology with works, lenses, and creators", () => {
   const page = readGenerated(path.join("ontology", "index.html"));
   const graph = JSON.parse(readGenerated(path.join("ontology", "graphify", "graph.json")));
@@ -106,7 +119,7 @@ test("publishes a Graphify ontology with works, lenses, and creators", () => {
   assert.match(page, /ontology\/graphify\/graph\.html/);
   const works = graph.nodes.filter((node) => node.kind === "work");
 
-  assert.equal(works.length, 64);
+  assert.equal(works.length, 85);
   assert.equal(works.filter((node) => node.label.replace(/\s+/g, "") === "봉산탈춤").length, 1);
   assert.ok(graph.edges.some((edge) => edge.relation === "contains_work"));
   assert.ok(graph.edges.some((edge) => edge.relation === "created_by"));
