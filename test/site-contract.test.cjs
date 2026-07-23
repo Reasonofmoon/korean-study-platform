@@ -114,6 +114,9 @@ test("publishes a Graphify ontology with works, lenses, and creators", () => {
   assert.doesNotMatch(graphHtml, /layout-page/);
   assert.doesNotMatch(graphHtml, /C:\\\\Users\\\\/);
   assert.match(graphHtml, /@media \(max-width: 760px\)/);
+  assert.match(graphHtml, /id = 'theme-toggle'/);
+  assert.match(graphHtml, /data-theme="light"/);
+  assert.match(graphHtml, /localStorage\.setItem\('ontology-theme'/);
 });
 
 test("links the library to the sibling ontology route", () => {

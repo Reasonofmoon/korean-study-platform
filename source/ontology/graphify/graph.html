@@ -51,6 +51,22 @@
   #legend-wrap { padding: 8px; }
   .legend-item { gap: 5px; font-size: 11px; }
 }
+
+:root { --graph-bg: #0f0f1a; --graph-panel: #1a1a2e; --graph-border: #2a2a4e; --graph-control: #3a3a5e; --graph-text: #e0e0e0; --graph-muted: #aaa; --graph-faint: #aaa; --graph-node-text: #ffffff; --graph-hover: #2a2a4e; --graph-accent: #4E79A7; }
+body, #graph { background: var(--graph-bg); color: var(--graph-text); }
+#sidebar { background: var(--graph-panel); border-left-color: var(--graph-border); }
+#search-wrap, #info-panel, #search-results { border-color: var(--graph-border); }
+#search, .legend-cb, #select-all-cb { background: var(--graph-bg); border-color: var(--graph-control); color: var(--graph-text); }
+#search:focus { border-color: var(--graph-accent); }
+.search-item:hover, .neighbor-link:hover, .legend-item:hover { background: var(--graph-hover); }
+#info-panel h3, #legend-wrap h3, #legend-controls label { color: var(--graph-muted); }
+#info-content, #info-content .field b, #legend-controls label:hover { color: var(--graph-text); }
+#info-content .empty, .legend-count, #stats { color: var(--graph-faint); }
+#stats { border-top-color: var(--graph-border); }
+#theme-toggle { width: 100%; margin-top: 8px; padding: 7px 10px; border: 1px solid var(--graph-control); border-radius: 6px; background: transparent; color: var(--graph-text); cursor: pointer; font: inherit; font-size: 12px; }
+#theme-toggle:hover { background: var(--graph-hover); }
+#theme-toggle:focus-visible { outline: 2px solid var(--graph-accent); outline-offset: 2px; }
+body[data-theme="light"] { --graph-bg: #faf8f3; --graph-panel: #fffdf8; --graph-border: #d8d2c5; --graph-control: #a9b9ae; --graph-text: #1a2b25; --graph-muted: #52685d; --graph-faint: #52685d; --graph-node-text: #1a2b25; --graph-hover: #f1ede3; --graph-accent: #1e5244; }
 </style>
 </head>
 <body>
@@ -322,6 +338,28 @@ network.on('afterDrawing', function(ctx) {
         ctx.fillText(h.label, cx, cy - 5);
         ctx.restore();
     });
+});
+</script>
+
+<script>
+const themeToggle = document.createElement('button');
+themeToggle.id = 'theme-toggle';
+themeToggle.type = 'button';
+document.getElementById('search-wrap').appendChild(themeToggle);
+function applyTheme(theme) {
+  const light = theme === 'light';
+  document.body.dataset.theme = light ? 'light' : 'dark';
+  themeToggle.textContent = light ? '다크 모드' : '라이트 모드';
+  themeToggle.setAttribute('aria-pressed', String(light));
+  const nodeText = getComputedStyle(document.body).getPropertyValue('--graph-node-text').trim();
+  nodesDS.update(RAW_NODES.map(node => ({ id: node.id, font: { ...node.font, color: nodeText } })));
+  network.redraw();
+}
+applyTheme(localStorage.getItem('ontology-theme') === 'light' ? 'light' : 'dark');
+themeToggle.addEventListener('click', () => {
+  const nextTheme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+  localStorage.setItem('ontology-theme', nextTheme);
+  applyTheme(nextTheme);
 });
 </script>
 </body>

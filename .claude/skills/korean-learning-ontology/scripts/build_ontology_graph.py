@@ -135,9 +135,50 @@ def main() -> None:
         "  .legend-item { gap: 5px; font-size: 11px; }\n"
         "}\n"
     )
+    theme_css = (
+        "\n:root { --graph-bg: #0f0f1a; --graph-panel: #1a1a2e; --graph-border: #2a2a4e; --graph-control: #3a3a5e; --graph-text: #e0e0e0; --graph-muted: #aaa; --graph-faint: #aaa; --graph-node-text: #ffffff; --graph-hover: #2a2a4e; --graph-accent: #4E79A7; }\n"
+        "body, #graph { background: var(--graph-bg); color: var(--graph-text); }\n"
+        "#sidebar { background: var(--graph-panel); border-left-color: var(--graph-border); }\n"
+        "#search-wrap, #info-panel, #search-results { border-color: var(--graph-border); }\n"
+        "#search, .legend-cb, #select-all-cb { background: var(--graph-bg); border-color: var(--graph-control); color: var(--graph-text); }\n"
+        "#search:focus { border-color: var(--graph-accent); }\n"
+        ".search-item:hover, .neighbor-link:hover, .legend-item:hover { background: var(--graph-hover); }\n"
+        "#info-panel h3, #legend-wrap h3, #legend-controls label { color: var(--graph-muted); }\n"
+        "#info-content, #info-content .field b, #legend-controls label:hover { color: var(--graph-text); }\n"
+        "#info-content .empty, .legend-count, #stats { color: var(--graph-faint); }\n"
+        "#stats { border-top-color: var(--graph-border); }\n"
+        "#theme-toggle { width: 100%; margin-top: 8px; padding: 7px 10px; border: 1px solid var(--graph-control); border-radius: 6px; background: transparent; color: var(--graph-text); cursor: pointer; font: inherit; font-size: 12px; }\n"
+        "#theme-toggle:hover { background: var(--graph-hover); }\n"
+        "#theme-toggle:focus-visible { outline: 2px solid var(--graph-accent); outline-offset: 2px; }\n"
+        "body[data-theme=\"light\"] { --graph-bg: #faf8f3; --graph-panel: #fffdf8; --graph-border: #d8d2c5; --graph-control: #a9b9ae; --graph-text: #1a2b25; --graph-muted: #52685d; --graph-faint: #52685d; --graph-node-text: #1a2b25; --graph-hover: #f1ede3; --graph-accent: #1e5244; }\n"
+    )
+    theme_script = (
+        "\n<script>\n"
+        "const themeToggle = document.createElement('button');\n"
+        "themeToggle.id = 'theme-toggle';\n"
+        "themeToggle.type = 'button';\n"
+        "document.getElementById('search-wrap').appendChild(themeToggle);\n"
+        "function applyTheme(theme) {\n"
+        "  const light = theme === 'light';\n"
+        "  document.body.dataset.theme = light ? 'light' : 'dark';\n"
+        "  themeToggle.textContent = light ? '다크 모드' : '라이트 모드';\n"
+        "  themeToggle.setAttribute('aria-pressed', String(light));\n"
+        "  const nodeText = getComputedStyle(document.body).getPropertyValue('--graph-node-text').trim();\n"
+        "  nodesDS.update(RAW_NODES.map(node => ({ id: node.id, font: { ...node.font, color: nodeText } })));\n"
+        "  network.redraw();\n"
+        "}\n"
+        "applyTheme(localStorage.getItem('ontology-theme') === 'light' ? 'light' : 'dark');\n"
+        "themeToggle.addEventListener('click', () => {\n"
+        "  const nextTheme = document.body.dataset.theme === 'light' ? 'dark' : 'light';\n"
+        "  localStorage.setItem('ontology-theme', nextTheme);\n"
+        "  applyTheme(nextTheme);\n"
+        "});\n"
+        "</script>\n"
+    )
     rendered_html = temp_html.read_text(encoding="utf-8")
     rendered_html = re.sub(r"<title>graphify - .*?</title>", "<title>학습 온톨로지 그래프</title>", rendered_html, count=1)
-    temp_html.write_text(rendered_html.replace("</style>", mobile_css + "</style>", 1), encoding="utf-8")
+    rendered_html = rendered_html.replace("</style>", mobile_css + theme_css + "</style>", 1)
+    temp_html.write_text(rendered_html.replace("</body>", theme_script + "</body>", 1), encoding="utf-8")
     temp_json.replace(graph_json)
     temp_html.replace(graph_html)
     print(f"Graphify ontology: {len(node_list)} nodes, {len(edge_list)} edges")

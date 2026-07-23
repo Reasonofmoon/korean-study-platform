@@ -25,6 +25,9 @@ This is a calm study desk: warm paper, dark ink, and clear editorial hierarchy. 
 | Gold | `--gold` | `#a98632` | Kicker and restrained emphasis |
 | Border | `--border` | `#d8d2c5` | Dividers and rows |
 | Success | `--success` | `#236b4d` | Ready status |
+| Graph night | `--graph-night` | `#0f0f1a` | Ontology canvas default |
+| Graph night panel | `--graph-night-panel` | `#1a1a2e` | Ontology sidebar default |
+| Graph node text | `--graph-node-text` | `#ffffff` / `#1a2b25` | Ontology node labels by theme |
 
 Rules: accent color signals navigation or learning state, never decoration. No raw color may appear outside the token definitions.
 
@@ -62,6 +65,11 @@ The base unit is 4px. Use `--space-1` (4px), `--space-2` (8px), `--space-3` (12p
 - Structure: native `<button>` with label and visible count.
 - States: default, hover, selected, focus.
 - Accessibility: `aria-pressed`; filtering only changes `hidden` state on matching lessons.
+
+### Graph theme toggle
+- Structure: native button in the Graphify search panel.
+- States: dark default, light selected, hover, focus.
+- Accessibility: `aria-pressed` announces the selected light state; the choice persists only in browser local storage.
 
 ### Lesson ledger row
 - Structure: order, subject tag, title and summary, time/status, route link.
