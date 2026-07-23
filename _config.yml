@@ -4,8 +4,8 @@ description: 읽기와 문학, 표현 활동을 차근차근 연결하는 공개
 keywords: 국어, 문학, 독서, 글쓰기, 2028 수능
 language: ko
 timezone: Asia/Seoul
-url: https://example.invalid
-root: /
+url: https://reasonofmoon.github.io/korean-study-platform
+root: /korean-study-platform/
 permalink: lessons/:title/
 pretty_urls:
   trailing_index: true

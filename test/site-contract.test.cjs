@@ -26,3 +26,9 @@ test("renders the first three high-school lesson routes", () => {
   assert.match(high, /lessons\/high-2028-reading-structure/);
   assert.match(high, /lessons\/high-2028-literature-viewpoint/);
 });
+
+test("uses the GitHub Pages project path for global styles", () => {
+  const home = readGenerated("index.html");
+
+  assert.match(home, /href="\/korean-study-platform\/css\/site\.css"/);
+});
