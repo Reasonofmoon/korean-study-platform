@@ -81,3 +81,18 @@ test("publishes a 34-work literature reading map without copied source text", ()
   assert.match(guide, /기록과 성찰/);
   assert.doesNotMatch(guide, /자료 위치|문학의 본질과 구조|문학의 수용과 생산/);
 });
+
+test("publishes a separate 32-work literature reading map without source structure", () => {
+  const guide = readGenerated(path.join("high-2028", "literature-reading-2", "index.html"));
+
+  assert.match(guide, /문학 추가 읽기 지도/);
+  assert.equal((guide.match(/class="literature-note"/g) || []).length, 32);
+  assert.match(guide, /감각과 정서/);
+  assert.match(guide, /인물과 사건/);
+  assert.match(guide, /무대와 매체/);
+  assert.match(guide, /비교와 확장/);
+  assert.match(guide, /기록과 성찰/);
+  assert.doesNotMatch(guide, /문학의 본질과|문학의 소통|한국 문학의|문학의 흐름/);
+  assert.doesNotMatch(guide, /지학사/);
+  assert.ok(guide.indexOf("어느 날 고궁을 나오면서") < guide.indexOf("두근두근 내 인생"));
+});

@@ -10,6 +10,8 @@ curriculum_links:
     label: 공통국어 1 학습 지도 보기
   - path: /high-2028/literature-2015/
     label: 문학 34편 읽기 지도 보기
+  - path: /high-2028/literature-reading-2/
+    label: 문학 추가 읽기 지도 보기
 subjects:
   - key: language
     label: 화법과 언어
