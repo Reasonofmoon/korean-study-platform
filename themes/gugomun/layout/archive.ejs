@@ -1,0 +1,6 @@
+<section class="topic-header" aria-labelledby="archive-title">
+  <p class="kicker">학습 기록</p>
+  <h1 id="archive-title">레슨 모음</h1>
+  <p>새로 공개된 국어 학습 레슨을 순서대로 확인합니다.</p>
+</section>
+<section class="section"><div class="lesson-ledger"><% page.posts.each(function(post, index) { %><article class="lesson-row"><span class="lesson-order"><%= String(index + 1).padStart(2, '0') %></span><div><p class="lesson-subject"><%= post.subject || '국어' %></p><h3><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3><p><%= post.description || '' %></p></div><div class="lesson-meta"><a href="<%- url_for(post.path) %>">학습 시작 <span aria-hidden="true">→</span></a></div></article><% }); %></div></section>

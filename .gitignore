@@ -1,0 +1,5 @@
+node_modules/
+public/
+.cache/
+db.json
+.DS_Store

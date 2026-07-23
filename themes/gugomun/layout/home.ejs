@@ -1,0 +1,42 @@
+<%
+var paths = [
+  { label: '초등', title: '이야기를 읽는 기초', text: '낱말과 문장을 연결해 이야기의 흐름을 찾습니다.', href: '/elementary/', count: '읽기 · 어휘 · 이야기' },
+  { label: '중등', title: '작품을 근거로 생각하기', text: '문학·독서·문법·글쓰기를 한 흐름으로 연습합니다.', href: '/middle/', count: '문학 · 독서 · 문법 · 글쓰기' },
+  { label: '고등 2028', title: '공통 국어의 깊이를 쌓기', text: '선택 대신 공통으로 만나는 세 영역을 순서 있게 학습합니다.', href: '/high-2028/', count: '화법과 언어 · 독서와 작문 · 문학' }
+];
+var recent = [];
+site.posts.sort('sequence', 1).each(function(post) { if (recent.length < 5) recent.push(post); });
+%>
+<section class="hero" aria-labelledby="hero-title">
+  <p class="kicker">국어 학습 스튜디오</p>
+  <h1 id="hero-title">국어를 읽는 힘에서<br>생각을 쓰는 힘까지.</h1>
+  <p>학년마다 필요한 읽기와 표현 활동을 연결하고, 고등 과정은 2028 공통 국어 체계에 맞춰 이어갑니다.</p>
+  <a class="button" href="#learning-path">학습 경로 보기</a>
+</section>
+
+<section id="learning-path" class="section" aria-labelledby="path-title">
+  <div class="section-heading"><p class="kicker">학습 경로</p><h2 id="path-title">지금의 학년에서 시작하세요</h2></div>
+  <div class="path-grid">
+    <% paths.forEach(function(item) { %>
+      <a class="path-card" href="<%- url_for(item.href) %>">
+        <p class="kicker"><%= item.label %></p>
+        <h3><%= item.title %></h3>
+        <p><%= item.text %></p>
+        <span><%= item.count %></span>
+      </a>
+    <% }); %>
+  </div>
+</section>
+
+<section class="section ledger-section" aria-labelledby="next-title">
+  <div class="section-heading"><p class="kicker">처음의 다섯 레슨</p><h2 id="next-title">한 걸음씩 학습해 보세요</h2></div>
+  <div class="lesson-ledger">
+    <% recent.forEach(function(post, index) { %>
+      <article class="lesson-row">
+        <span class="lesson-order"><%= String(index + 1).padStart(2, '0') %></span>
+        <div><p class="lesson-subject"><%= post.subject %></p><h3><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3><p><%= post.description %></p></div>
+        <div class="lesson-meta"><span><%= post.study_time %></span><a href="<%- url_for(post.path) %>">학습 시작 <span aria-hidden="true">→</span></a></div>
+      </article>
+    <% }); %>
+  </div>
+</section>

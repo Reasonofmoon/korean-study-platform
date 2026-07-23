@@ -1,0 +1,16 @@
+<article class="article">
+  <header class="article-header">
+    <%
+      var levelLabel = { elementary: '초등', middle: '중등', 'high-2028': '고등 2028' }[page.level] || page.level;
+    %>
+    <p class="kicker"><%= levelLabel %> · <%= page.subject %></p>
+    <h1><%= page.title %></h1>
+    <p><%= page.description %></p>
+    <div class="article-meta"><span><%= page.study_time %></span><span><%= page.status %></span></div>
+  </header>
+  <div class="article-entry"><%- page.content %></div>
+  <section class="study-sequence" aria-labelledby="sequence-title">
+    <p class="kicker">학습 순서</p><h2 id="sequence-title">읽고, 확인하고, 표현하기</h2>
+    <ol><li>읽기 자료의 중심 내용을 한 문장으로 정리합니다.</li><li>핵심 낱말과 근거가 되는 표현을 표시합니다.</li><li>확인 질문에 짧고 정확하게 답합니다.</li><li>자신의 근거를 덧붙여 한 문단으로 표현합니다.</li><li>다음 레슨으로 연결되는 질문을 남깁니다.</li></ol>
+  </section>
+</article>

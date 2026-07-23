@@ -1,0 +1,32 @@
+<%
+var lessons = [];
+site.posts.each(function(post) { if (post.level === page.level_key) lessons.push(post); });
+lessons.sort(function(a, b) { return Number(a.sequence || 0) - Number(b.sequence || 0); });
+var subjects = page.subjects || [];
+%>
+<section class="topic-header" aria-labelledby="level-title">
+  <p class="kicker"><%= page.kicker %></p>
+  <h1 id="level-title"><%= page.title %></h1>
+  <p><%= page.description %></p>
+  <div class="topic-summary"><strong><%= lessons.length %></strong><span>개 레슨</span><span><%= page.summary %></span></div>
+</section>
+
+<section class="section" data-filter-root aria-labelledby="lesson-title">
+  <div class="section-heading"><p class="kicker">주제별 학습</p><h2 id="lesson-title">순서대로 이어지는 레슨</h2></div>
+  <div class="filter-bar" role="group" aria-label="레슨 주제 필터">
+    <button class="filter-chip is-active" type="button" aria-pressed="true" data-filter="all">전체 <strong><%= lessons.length %></strong></button>
+    <% subjects.forEach(function(subject) { var count = lessons.filter(function(post) { return post.subject === subject.label; }).length; %>
+      <button class="filter-chip" type="button" aria-pressed="false" data-filter="<%= subject.key %>"<%- count ? '' : ' disabled' %>><%= subject.label %> <strong><%= count %></strong></button>
+    <% }); %>
+  </div>
+  <div class="lesson-ledger" data-lesson-list>
+    <% lessons.forEach(function(post) { %>
+      <article class="lesson-row" data-lesson data-subject="<%= post.subject_key %>">
+        <span class="lesson-order"><%= String(post.sequence).padStart(2, '0') %></span>
+        <div><p class="lesson-subject"><%= post.subject %></p><h3><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3><p><%= post.description %></p></div>
+        <div class="lesson-meta"><span><%= post.study_time %></span><span class="status"><%= post.status %></span><a href="<%- url_for(post.path) %>">학습 시작 <span aria-hidden="true">→</span></a></div>
+      </article>
+    <% }); %>
+  </div>
+  <p class="empty-state" data-empty hidden>선택한 주제의 레슨을 준비하고 있습니다.</p>
+</section>

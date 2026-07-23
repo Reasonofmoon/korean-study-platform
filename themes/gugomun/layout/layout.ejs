@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= page.description || config.description %>">
+    <title><%= page.title ? page.title + ' | ' : '' %><%= config.title %></title>
+    <link rel="stylesheet" href="<%- url_for('/css/site.css') %>">
+  </head>
+  <body class="layout-<%= page.layout || 'page' %>">
+    <%- partial('_partial/header') %>
+    <main id="content" class="site-main outer"><%- body %></main>
+    <%- partial('_partial/footer') %>
+    <script src="<%- url_for('/js/filters.js') %>" defer></script>
+  </body>
+</html>

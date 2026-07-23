@@ -1,0 +1,26 @@
+<%
+var links = [
+  { label: '홈', path: '/' },
+  { label: '초등', path: '/elementary/' },
+  { label: '중등', path: '/middle/' },
+  { label: '고등 2028', path: '/high-2028/' },
+  { label: '자료실', path: '/library/' }
+];
+  var current = '/' + String(page.path || '').replace(/index\.html$/, '');
+  if (page.layout === 'post' && page.level) {
+    current = page.level === 'high-2028' ? '/high-2028/' : '/' + page.level + '/';
+  }
+%>
+<header class="site-header">
+  <div class="outer header-inner">
+    <a class="brand" href="<%- url_for('/') %>">
+      <span class="brand-mark" aria-hidden="true">문</span>
+      <span><strong>국어 학습 플랫폼</strong><small>읽고, 생각하고, 표현하기</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="주요 탐색">
+      <% links.forEach(function(link) { var active = current === link.path; %>
+        <a href="<%- url_for(link.path) %>"<%- active ? ' aria-current="page"' : '' %>><%= link.label %></a>
+      <% }); %>
+    </nav>
+  </div>
+</header>
