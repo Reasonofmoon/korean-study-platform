@@ -84,6 +84,9 @@ h3 { margin-bottom: var(--space-2); font-size: 1.125rem; }
 .study-sequence li + li { margin-top: var(--space-2); }
 .literature-note { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--border); }
 .literature-note p { margin: var(--space-2) 0 0; }
+.ontology-actions { margin-top: var(--space-5); }
+.graphify-frame-wrap { margin-top: var(--space-6); min-height: 720px; border: 1px solid var(--border); background: var(--pine-dark); }
+.graphify-frame { display: block; width: 100%; min-height: 720px; border: 0; }
 .showcase { margin-top: var(--space-10); }
 .site-footer { margin-top: var(--space-16); padding: var(--space-8) 0; background: var(--pine-dark); color: var(--surface); }
 .site-footer p { margin: var(--space-1) 0 0; color: var(--pine-soft); font-size: .875rem; }
@@ -100,6 +103,7 @@ h3 { margin-bottom: var(--space-2); font-size: 1.125rem; }
   .lesson-row { grid-template-columns: 36px minmax(0, 1fr); gap: var(--space-3); }
   .lesson-meta { grid-column: 2; grid-template-columns: repeat(3, max-content); align-items: center; gap: var(--space-3); }
   .article-entry { font-size: 1rem; }
+  .graphify-frame-wrap, .graphify-frame { min-height: 600px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

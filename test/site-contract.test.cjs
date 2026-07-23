@@ -96,3 +96,28 @@ test("publishes a separate 32-work literature reading map without source structu
   assert.doesNotMatch(guide, /지학사/);
   assert.ok(guide.indexOf("어느 날 고궁을 나오면서") < guide.indexOf("두근두근 내 인생"));
 });
+
+test("publishes a Graphify ontology with works, lenses, and creators", () => {
+  const page = readGenerated(path.join("ontology", "index.html"));
+  const graph = JSON.parse(readGenerated(path.join("ontology", "graphify", "graph.json")));
+  const graphHtml = readGenerated(path.join("ontology", "graphify", "graph.html"));
+
+  assert.match(page, /학습 온톨로지 지도/);
+  assert.match(page, /ontology\/graphify\/graph\.html/);
+  const works = graph.nodes.filter((node) => node.kind === "work");
+
+  assert.equal(works.length, 64);
+  assert.equal(works.filter((node) => node.label.replace(/\s+/g, "") === "봉산탈춤").length, 1);
+  assert.ok(graph.edges.some((edge) => edge.relation === "contains_work"));
+  assert.ok(graph.edges.some((edge) => edge.relation === "created_by"));
+  assert.match(graphHtml, /vis-network/);
+  assert.doesNotMatch(graphHtml, /layout-page/);
+  assert.doesNotMatch(graphHtml, /C:\\\\Users\\\\/);
+  assert.match(graphHtml, /@media \(max-width: 760px\)/);
+});
+
+test("links the library to the sibling ontology route", () => {
+  const library = readGenerated(path.join("library", "index.html"));
+
+  assert.match(library, /href="\.\.\/ontology\/"/);
+});

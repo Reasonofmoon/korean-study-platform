@@ -16,6 +16,7 @@ source_dir: source
 public_dir: public
 skip_render:
   - downloads/**
+  - ontology/graphify/**
 marked:
   gfm: true
   headerIds: true

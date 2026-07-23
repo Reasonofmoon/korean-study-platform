@@ -1,0 +1,10 @@
+<article class="ontology-page">
+  <header class="article-header">
+    <p class="kicker"><%= page.kicker %></p>
+    <h1><%= page.title %></h1>
+    <p><%= page.description %></p>
+  </header>
+  <div class="ontology-actions"><a class="button" href="<%- url_for(page.graph_path) %>" target="_blank" rel="noopener">Graphify 그래프 크게 열기</a></div>
+  <div class="graphify-frame-wrap"><iframe class="graphify-frame" title="학습 온톨로지 Graphify 그래프" src="<%- url_for(page.graph_path) %>" loading="lazy"></iframe></div>
+  <div class="article-entry"><%- page.content %></div>
+</article>
