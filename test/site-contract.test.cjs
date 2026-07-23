@@ -7,6 +7,10 @@ function readGenerated(relativePath) {
   return fs.readFileSync(path.join(process.cwd(), "public", relativePath), "utf8");
 }
 
+function readTheme(relativePath) {
+  return fs.readFileSync(path.join(process.cwd(), "themes", "gugomun", relativePath), "utf8");
+}
+
 test("renders the three school paths and 2028 high-school subjects", () => {
   const home = readGenerated("index.html");
   const high = readGenerated(path.join("high-2028", "index.html"));
@@ -33,6 +37,21 @@ test("uses the GitHub Pages project path for global styles", () => {
   assert.match(home, /href="\/korean-study-platform\/css\/site\.css"/);
 });
 
+test("separates multiple curriculum links at every viewport", () => {
+  const levelLayout = readTheme(path.join("layout", "level.ejs"));
+  const css = readTheme(path.join("source", "css", "site.css"));
+
+  assert.match(levelLayout, /class="curriculum-links"/);
+  assert.match(css, /\.curriculum-links \{ display: flex; flex-wrap: wrap; gap: var\(--space-2\); \}/);
+  assert.match(css, /\.curriculum-links \.button \{ margin-top: var\(--space-4\); flex: 0 0 auto; \}/);
+});
+
+test("wraps Korean reading content without horizontal clipping", () => {
+  const css = readTheme(path.join("source", "css", "site.css"));
+
+  assert.match(css, /\.article-entry p, \.article-entry li \{ overflow-wrap: anywhere; word-break: normal; \}/);
+});
+
 test("publishes a 13-note Common Korean I learning map", () => {
   const map = readGenerated(path.join("high-2028", "common-korean-1", "index.html"));
   const notes = [
@@ -48,4 +67,17 @@ test("publishes a 13-note Common Korean I learning map", () => {
   assert.match(map, /언어 지식과 상호작용/);
   assert.match(map, /논증과 공동체 글쓰기/);
   notes.forEach((slug) => assert.doesNotThrow(() => readGenerated(path.join("lessons", `common-korean-1-${slug}`, "index.html"))));
+});
+
+test("publishes a 34-work literature reading map without copied source text", () => {
+  const guide = readGenerated(path.join("high-2028", "literature-2015", "index.html"));
+
+  assert.match(guide, /문학 34편 읽기 지도/);
+  assert.equal((guide.match(/class="literature-note"/g) || []).length, 34);
+  assert.match(guide, /언어와 정서/);
+  assert.match(guide, /이야기의 사건과 인물/);
+  assert.match(guide, /사회와 관계/);
+  assert.match(guide, /무대와 매체/);
+  assert.match(guide, /기록과 성찰/);
+  assert.doesNotMatch(guide, /자료 위치|문학의 본질과 구조|문학의 수용과 생산/);
 });

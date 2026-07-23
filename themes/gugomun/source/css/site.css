@@ -46,6 +46,8 @@ h3 { margin-bottom: var(--space-2); font-size: 1.125rem; }
 .hero > p:not(.kicker), .topic-header > p:not(.kicker), .article-header > p:not(.kicker) { max-width: 680px; color: var(--ink-muted); font-size: 1.125rem; }
 .button { display: inline-block; margin-top: var(--space-4); padding: 10px 16px; border-radius: 6px; background: var(--pine); color: var(--surface); font-weight: 700; transition: background-color 150ms ease-out, transform 150ms ease-out; }
 .button:hover { background: var(--pine-dark); transform: translateY(-1px); }
+.curriculum-links { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.curriculum-links .button { margin-top: var(--space-4); flex: 0 0 auto; }
 .section { margin-top: var(--space-16); }
 .section-heading { margin-bottom: var(--space-6); }
 .path-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
@@ -75,10 +77,13 @@ h3 { margin-bottom: var(--space-2); font-size: 1.125rem; }
 .article { max-width: 780px; }
 .article-entry { margin-top: var(--space-8); font-size: 1.0625rem; }
 .article-entry h2 { margin-top: var(--space-10); }
+.article-entry p, .article-entry li { overflow-wrap: anywhere; word-break: normal; }
 .article-entry blockquote { margin: var(--space-6) 0; padding: var(--space-4) var(--space-5); border-left: 4px solid var(--gold); background: var(--surface-muted); }
 .study-sequence { margin-top: var(--space-12); padding: var(--space-6); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
 .study-sequence ol { margin: 0; padding-left: 1.4rem; }
 .study-sequence li + li { margin-top: var(--space-2); }
+.literature-note { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--border); }
+.literature-note p { margin: var(--space-2) 0 0; }
 .showcase { margin-top: var(--space-10); }
 .site-footer { margin-top: var(--space-16); padding: var(--space-8) 0; background: var(--pine-dark); color: var(--surface); }
 .site-footer p { margin: var(--space-1) 0 0; color: var(--pine-soft); font-size: .875rem; }
