@@ -673,6 +673,42 @@
       "kind": "practice_question"
     },
     {
+      "id": "practice:53225f3eefb6",
+      "label": "KOR-MYP5-LIT-114",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:4546c15e230c",
+      "label": "KOR-MYP5-LIT-115",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:4ff3c9dd4888",
+      "label": "KOR-MYP5-LIT-116",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:154e2bf07581",
+      "label": "KOR-MYP5-LIT-117",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:cdd2dc41f96e",
+      "label": "KOR-MYP5-LIT-118",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:19e778ff5e91",
+      "label": "KOR-MYP5-LIT-119",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
       "id": "lens:f86da1fa1024",
       "label": "감각과 정서",
       "file_type": "concept",
@@ -2883,6 +2919,18 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:4dc19f25fe27",
+      "target": "practice:19e778ff5e91",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:5316ebf7ec6d",
+      "target": "practice:4546c15e230c",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:56d746b77a48",
       "target": "practice:a654c760c9f9",
       "relation": "has_practice",
@@ -2891,6 +2939,18 @@
     {
       "source": "work:5bbbc19d7bb5",
       "target": "practice:ff08d57446bc",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:5da873d76cc3",
+      "target": "practice:cdd2dc41f96e",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:7b3242b2bbc6",
+      "target": "practice:53225f3eefb6",
       "relation": "has_practice",
       "confidence": "EXTRACTED"
     },
@@ -2931,6 +2991,12 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:cee4cefb875e",
+      "target": "practice:4ff3c9dd4888",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:d28ef7f380d3",
       "target": "practice:499295417e34",
       "relation": "has_practice",
@@ -2945,6 +3011,12 @@
     {
       "source": "work:df8674e9e9a0",
       "target": "practice:fa47abdb3c6e",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:dfb3232f8f7d",
+      "target": "practice:154e2bf07581",
       "relation": "has_practice",
       "confidence": "EXTRACTED"
     },
@@ -3045,7 +3117,25 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "practice:154e2bf07581",
+      "target": "answer_skill:600050c08cde",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "practice:191ed6b40c28",
+      "target": "answer_skill:3599bd7bb7a1",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:19e778ff5e91",
+      "target": "answer_skill:3599bd7bb7a1",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:4546c15e230c",
       "target": "answer_skill:3599bd7bb7a1",
       "relation": "trains_skill",
       "confidence": "EXTRACTED"
@@ -3059,6 +3149,18 @@
     {
       "source": "practice:4e98b2dff578",
       "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:4ff3c9dd4888",
+      "target": "answer_skill:0381db05049f",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:53225f3eefb6",
+      "target": "answer_skill:4646839b0e8d",
       "relation": "trains_skill",
       "confidence": "EXTRACTED"
     },
@@ -3107,6 +3209,12 @@
     {
       "source": "practice:c2533617ccac",
       "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:cdd2dc41f96e",
+      "target": "answer_skill:2a6cec47e3f3",
       "relation": "trains_skill",
       "confidence": "EXTRACTED"
     },

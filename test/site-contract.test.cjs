@@ -153,12 +153,24 @@ test("publishes eight independent MYP-style literature practices", () => {
 test("publishes a first independent practice batch for 문학 34편 읽기 지도", () => {
   const guide = readGenerated(path.join("high-2028", "literature-2015", "index.html"));
   const practices = guide.match(/<section class="ib-practice"[\s\S]*?<\/section>/g) || [];
+  const firstBatch = practices.slice(0, 13).join("");
 
-  assert.equal(practices.length, 13);
-  assert.equal((guide.match(/KOR-MYP5-LIT-1\d\d/g) || []).length, 13);
-  assert.equal((guide.match(/data-origin="independent"/g) || []).length, 13);
-  assert.equal((guide.match(/data-disclosure="not-affiliated"/g) || []).length, 13);
-  assert.doesNotMatch(practices.join(""), /출판사|1단원|2단원/);
+  assert.equal(practices.length >= 13, true);
+  assert.equal((firstBatch.match(/KOR-MYP5-LIT-1\d\d/g) || []).length, 13);
+  assert.equal((firstBatch.match(/data-origin="independent"/g) || []).length, 13);
+  assert.equal((firstBatch.match(/data-disclosure="not-affiliated"/g) || []).length, 13);
+  assert.doesNotMatch(firstBatch, /출판사|1단원|2단원/);
+});
+
+test("publishes six narrative-focused independent literature practices", () => {
+  const guide = readGenerated(path.join("high-2028", "literature-2015", "index.html"));
+  const practices = guide.match(/<section class="ib-practice"[\s\S]*?<\/section>/g) || [];
+
+  assert.equal(practices.length, 19);
+  ["114", "115", "116", "117", "118", "119"].forEach((suffix) => {
+    assert.match(guide, new RegExp(`KOR-MYP5-LIT-${suffix}`));
+  });
+  assert.doesNotMatch(practices.slice(-6).join(""), /출판사|1단원|2단원/);
 });
 
 test("publishes an original eight-step descriptive-response practice map", () => {
@@ -184,9 +196,22 @@ test("publishes a Graphify ontology with works, lenses, and creators", () => {
   assert.ok(graph.edges.some((edge) => edge.relation === "contains_work"));
   assert.ok(graph.edges.some((edge) => edge.relation === "created_by"));
   assert.equal(graph.nodes.filter((node) => node.kind === "answer_skill").length, 8);
-  assert.equal(graph.nodes.filter((node) => node.kind === "practice_question").length, 21);
-  assert.equal(graph.edges.filter((edge) => edge.relation === "has_practice").length, 21);
-  assert.equal(graph.edges.length, 303);
+  assert.equal(graph.nodes.length, 261);
+  const practices = graph.nodes.filter((node) => node.kind === "practice_question");
+  const practiceIds = new Set(practices.map((practice) => practice.id));
+  const answerSkillIds = new Set(graph.nodes.filter((node) => node.kind === "answer_skill").map((skill) => skill.id));
+  const workPracticeEdges = graph.edges.filter((edge) => edge.relation === "has_practice" && practiceIds.has(edge.target));
+  const practiceSkillEdges = graph.edges.filter((edge) => edge.relation === "trains_skill" && practiceIds.has(edge.source));
+  assert.equal(practices.length, 27);
+  assert.equal(workPracticeEdges.length, 27);
+  assert.equal(practiceSkillEdges.length, 27);
+  practices.forEach((practice) => {
+    assert.equal(workPracticeEdges.filter((edge) => edge.target === practice.id).length, 1);
+    const skillEdges = practiceSkillEdges.filter((edge) => edge.source === practice.id);
+    assert.equal(skillEdges.length, 1);
+    assert.ok(answerSkillIds.has(skillEdges[0].target));
+  });
+  assert.equal(graph.edges.length, 315);
   assert.ok(graph.edges.some((edge) => edge.relation === "trains_skill"));
   assert.doesNotMatch(JSON.stringify(graph), /source\/high-2028|출판사|1단원|정답|해설|선택지|자료 위치/);
   assert.match(graphHtml, /vis-network/);
