@@ -50,6 +50,7 @@ test("wraps Korean reading content without horizontal clipping", () => {
   const css = readTheme(path.join("source", "css", "site.css"));
 
   assert.match(css, /\.article-entry p, \.article-entry li \{ overflow-wrap: anywhere; word-break: normal; \}/);
+  assert.match(css, /\.article-entry li \{ overflow-wrap: normal; word-break: keep-all; \}/);
 });
 
 test("publishes a 13-note Common Korean I learning map", () => {
@@ -110,6 +111,28 @@ test("publishes an independent literature expansion map without source structure
   assert.doesNotMatch(guide, /2015년 개정판|창비 문학|문학의 본질|문학과 삶/);
 });
 
+test("publishes a MECE literature deep-reading map without source structure", () => {
+  const guide = readGenerated(path.join("high-2028", "literature-reading-4", "index.html"));
+
+  assert.match(guide, /문학 심화 읽기 지도/);
+  assert.equal((guide.match(/class="literature-note"/g) || []).length, 20);
+  assert.match(guide, /이미지와 감각/);
+  assert.match(guide, /자아와 관계/);
+  assert.match(guide, /사회와 현실/);
+  assert.match(guide, /전통과 형식/);
+  assert.match(guide, /서사와 전환/);
+  assert.doesNotMatch(guide, /천재|문학과 삶|문학의 수용과 생산/);
+});
+
+test("publishes an original eight-step descriptive-response practice map", () => {
+  const guide = readGenerated(path.join("high-2028", "descriptive-response", "index.html"));
+
+  assert.match(guide, /서술형 답안 훈련/);
+  assert.equal((guide.match(/class="answer-practice"/g) || []).length, 8);
+  ["확인", "추론", "분석", "비교", "평가", "변환", "구성", "고쳐쓰기"].forEach((label) => assert.match(guide, new RegExp(label)));
+  assert.doesNotMatch(guide, /1단원|2단원|3단원|4단원|5단원|출판사/);
+});
+
 test("publishes a Graphify ontology with works, lenses, and creators", () => {
   const page = readGenerated(path.join("ontology", "index.html"));
   const graph = JSON.parse(readGenerated(path.join("ontology", "graphify", "graph.json")));
@@ -119,10 +142,12 @@ test("publishes a Graphify ontology with works, lenses, and creators", () => {
   assert.match(page, /ontology\/graphify\/graph\.html/);
   const works = graph.nodes.filter((node) => node.kind === "work");
 
-  assert.equal(works.length, 85);
+  assert.equal(works.length, 105);
   assert.equal(works.filter((node) => node.label.replace(/\s+/g, "") === "봉산탈춤").length, 1);
   assert.ok(graph.edges.some((edge) => edge.relation === "contains_work"));
   assert.ok(graph.edges.some((edge) => edge.relation === "created_by"));
+  assert.equal(graph.nodes.filter((node) => node.kind === "answer_skill").length, 8);
+  assert.ok(graph.edges.some((edge) => edge.relation === "trains_skill"));
   assert.match(graphHtml, /vis-network/);
   assert.doesNotMatch(graphHtml, /layout-page/);
   assert.doesNotMatch(graphHtml, /C:\\\\Users\\\\/);

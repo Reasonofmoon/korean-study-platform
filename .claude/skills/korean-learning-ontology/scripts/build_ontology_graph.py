@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import re
 import sys
+import unicodedata
 
 import networkx as nx
 
@@ -21,17 +22,27 @@ GUIDES = [
     SOURCE / "high-2028" / "literature-2015" / "index.md",
     SOURCE / "high-2028" / "literature-reading-2" / "index.md",
     SOURCE / "high-2028" / "literature-reading-3" / "index.md",
+    SOURCE / "high-2028" / "literature-reading-4" / "index.md",
+    SOURCE / "high-2028" / "descriptive-response" / "index.md",
 ]
-HEADING = re.compile(r"^##\s+\d+\.\s+(.+?)\s+·\s+\d+편\s*$", re.MULTILINE)
+HEADING = re.compile(r"^##\s+\d+\.\s+(.+?)\s+·\s+\d+(?:편|개)\s*$", re.MULTILINE)
 ARTICLE = re.compile(
     r'<article class="literature-note"><h3>(?P<title>.*?)</h3>'
     r'<p><strong>표기:</strong> (?P<creator>.*?)</p>',
+    re.DOTALL,
+)
+PRACTICE_ARTICLE = re.compile(
+    r'<article class="answer-practice"><h3>(?P<title>.*?)</h3>',
     re.DOTALL,
 )
 
 
 def stable_id(prefix: str, label: str) -> str:
     return f"{prefix}:{sha1(label.strip().casefold().encode()).hexdigest()[:12]}"
+
+
+def normalized_work_label(label: str) -> str:
+    return re.sub(r"\s+", "", unicodedata.normalize("NFC", label))
 
 
 def frontmatter_value(text: str, key: str) -> str:
@@ -54,7 +65,6 @@ def add_node(nodes: dict[str, dict], node_id: str, label: str, kind: str, source
         "label": label,
         "file_type": "concept",
         "kind": kind,
-        "source_file": source_file,
     })
 
 
@@ -70,8 +80,8 @@ def add_edge(edges: dict[tuple[str, str, str], dict], source: str, target: str, 
 def main() -> None:
     nodes: dict[str, dict] = {}
     edges: dict[tuple[str, str, str], dict] = {}
-    communities = {0: [], 1: [], 2: [], 3: [], 4: []}
-    labels = {0: "학습 경로", 1: "문학 읽기 지도", 2: "읽기 관점", 3: "작품", 4: "창작자·전승"}
+    communities = {0: [], 1: [], 2: [], 3: [], 4: [], 5: []}
+    labels = {0: "학습 경로", 1: "학습 지도", 2: "읽기 관점", 3: "작품", 4: "창작자·전승", 5: "서술형 역량"}
 
     high_id = "path:high-2028"
     add_node(nodes, high_id, "고등 2028 문학", "path", "source/high-2028/index.md")
@@ -87,27 +97,38 @@ def main() -> None:
         add_edge(edges, high_id, map_id, "has_map")
 
         sections = list(HEADING.finditer(text))
+        practice_map = 'class="answer-practice"' in text
         for index, section in enumerate(sections):
             lens_label = section.group(1)
-            lens_id = stable_id("lens", f"{map_label}:{lens_label}")
+            lens_id = stable_id("lens", lens_label)
             add_node(nodes, lens_id, lens_label, "reading_lens", source_file)
-            communities[2].append(lens_id)
+            if lens_id not in communities[2]:
+                communities[2].append(lens_id)
             add_edge(edges, map_id, lens_id, "uses_lens")
             end = sections[index + 1].start() if index + 1 < len(sections) else text.find("## 스스로 확인하기", section.end())
             chunk = text[section.end(): end if end != -1 else len(text)]
-            for article in ARTICLE.finditer(chunk):
-                work_label = article.group("title").strip()
-                work_id = stable_id("work", re.sub(r"\s+", "", work_label))
-                add_node(nodes, work_id, work_label, "work", source_file)
-                if work_id not in communities[3]:
-                    communities[3].append(work_id)
-                add_edge(edges, lens_id, work_id, "contains_work")
-                for name in creator_names(article.group("creator")):
-                    creator_id = stable_id("creator", name)
-                    add_node(nodes, creator_id, name, "creator", source_file)
-                    if creator_id not in communities[4]:
-                        communities[4].append(creator_id)
-                    add_edge(edges, work_id, creator_id, "created_by")
+            if practice_map:
+                for article in PRACTICE_ARTICLE.finditer(chunk):
+                    skill_label = article.group("title").strip()
+                    skill_id = stable_id("answer_skill", skill_label)
+                    add_node(nodes, skill_id, skill_label, "answer_skill", source_file)
+                    if skill_id not in communities[5]:
+                        communities[5].append(skill_id)
+                    add_edge(edges, lens_id, skill_id, "trains_skill")
+            else:
+                for article in ARTICLE.finditer(chunk):
+                    work_label = article.group("title").strip()
+                    work_id = stable_id("work", normalized_work_label(work_label))
+                    add_node(nodes, work_id, work_label, "work", source_file)
+                    if work_id not in communities[3]:
+                        communities[3].append(work_id)
+                    add_edge(edges, lens_id, work_id, "contains_work")
+                    for name in creator_names(article.group("creator")):
+                        creator_id = stable_id("creator", name)
+                        add_node(nodes, creator_id, name, "creator", source_file)
+                        if creator_id not in communities[4]:
+                            communities[4].append(creator_id)
+                        add_edge(edges, work_id, creator_id, "created_by")
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
     node_list = sorted(nodes.values(), key=lambda node: (node["kind"], node["label"]))

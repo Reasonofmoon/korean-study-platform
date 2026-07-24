@@ -14,6 +14,10 @@ curriculum_links:
     label: 문학 추가 읽기 지도 보기
   - path: /high-2028/literature-reading-3/
     label: 문학 확장 지도 보기
+  - path: /high-2028/literature-reading-4/
+    label: 문학 심화 읽기 지도 보기
+  - path: /high-2028/descriptive-response/
+    label: 서술형 답안 훈련 보기
 subjects:
   - key: language
     label: 화법과 언어

@@ -13,3 +13,5 @@
 | 2026-07-23 | 문학 추가 읽기 지도 확장 | literature-reading-2 | 한글 깨짐 HWP 차례를 독립 학습 카드로 재구성 |
 | 2026-07-23 | Graphify 온톨로지 그래프 추가 | korean-learning-ontology | 작품·단원·개념의 시각적 관계 탐색 |
 | 2026-07-23 | 문학 확장 읽기 지도 추가 | literature-reading-3 | HWP 목차의 공개 메타정보를 독립 읽기 노트와 온톨로지로 통합 |
+| 2026-07-24 | 문학 심화 읽기 지도 추가 | literature-reading-4 | HWP 목차의 공개 메타정보를 독립 MECE 노트와 온톨로지로 통합 |
+| 2026-07-24 | 서술형 답안 훈련 추가 | descriptive-response | HWP 형식 메타정보를 독립 연습과 온톨로지 역량으로 통합 |
