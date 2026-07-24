@@ -132,7 +132,22 @@ test("publishes an independently arranged literature exploration map", () => {
   assert.match(guide, /인물과 사회/);
   assert.match(guide, /말과 태도/);
   assert.match(guide, /공동체와 기억/);
+  assert.equal((guide.match(/class="ib-practice"/g) || []).length, 8);
   assert.doesNotMatch(guide, /선비모음|1단원|2단원|출판사/);
+});
+
+test("publishes eight independent MYP-style literature practices", () => {
+  const guide = readGenerated(path.join("high-2028", "literature-exploration", "index.html"));
+  const questionId = guide.indexOf("KOR-MYP5-LIT-001");
+  const question = guide.slice(guide.lastIndexOf("<section", questionId), guide.indexOf("</section>", questionId));
+
+  assert.match(question, /KOR-MYP5-LIT-001/);
+  assert.match(question, /data-skill="분석:/);
+  assert.match(question, /data-origin="independent"/);
+  assert.match(question, /data-disclosure="not-affiliated"/);
+  assert.match(question, /class="score-range">3–4점<\/span>/);
+  assert.equal((guide.match(/data-origin="independent"/g) || []).length, 8);
+  assert.equal((guide.match(/data-disclosure="not-affiliated"/g) || []).length, 8);
 });
 
 test("publishes an original eight-step descriptive-response practice map", () => {
@@ -158,7 +173,11 @@ test("publishes a Graphify ontology with works, lenses, and creators", () => {
   assert.ok(graph.edges.some((edge) => edge.relation === "contains_work"));
   assert.ok(graph.edges.some((edge) => edge.relation === "created_by"));
   assert.equal(graph.nodes.filter((node) => node.kind === "answer_skill").length, 8);
+  assert.equal(graph.nodes.filter((node) => node.kind === "practice_question").length, 8);
+  assert.equal(graph.edges.filter((edge) => edge.relation === "has_practice").length, 8);
+  assert.equal(graph.edges.length, 277);
   assert.ok(graph.edges.some((edge) => edge.relation === "trains_skill"));
+  assert.doesNotMatch(JSON.stringify(graph), /source\/high-2028|출판사|1단원|정답|해설|선택지|자료 위치/);
   assert.match(graphHtml, /vis-network/);
   assert.doesNotMatch(graphHtml, /layout-page/);
   assert.doesNotMatch(graphHtml, /C:\\\\Users\\\\/);

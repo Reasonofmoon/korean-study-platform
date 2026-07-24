@@ -547,6 +547,54 @@
       "kind": "path"
     },
     {
+      "id": "practice:ec945e92d799",
+      "label": "KOR-MYP5-LIT-001",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:c0cc0b411e1e",
+      "label": "KOR-MYP5-LIT-002",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:b53fd1888c2c",
+      "label": "KOR-MYP5-LIT-003",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:499295417e34",
+      "label": "KOR-MYP5-LIT-004",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:a654c760c9f9",
+      "label": "KOR-MYP5-LIT-005",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:daf144a3a088",
+      "label": "KOR-MYP5-LIT-006",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:067ad7588019",
+      "label": "KOR-MYP5-LIT-007",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:ff08d57446bc",
+      "label": "KOR-MYP5-LIT-008",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
       "id": "lens:f86da1fa1024",
       "label": "감각과 정서",
       "file_type": "concept",
@@ -2733,6 +2781,54 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:0c8cadb3e4c5",
+      "target": "practice:067ad7588019",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:56d746b77a48",
+      "target": "practice:a654c760c9f9",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:5bbbc19d7bb5",
+      "target": "practice:ff08d57446bc",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:b4c11117b8d3",
+      "target": "practice:ec945e92d799",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:c021d9a74201",
+      "target": "practice:b53fd1888c2c",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:d28ef7f380d3",
+      "target": "practice:499295417e34",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:ff053461c10c",
+      "target": "practice:c0cc0b411e1e",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:ff41c4552982",
+      "target": "practice:daf144a3a088",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "lens:027a7c2f0f1b",
       "target": "answer_skill:4646839b0e8d",
       "relation": "trains_skill",
@@ -2777,6 +2873,54 @@
     {
       "source": "lens:d5ce088d01e0",
       "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:067ad7588019",
+      "target": "answer_skill:4646839b0e8d",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:499295417e34",
+      "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:a654c760c9f9",
+      "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:b53fd1888c2c",
+      "target": "answer_skill:3599bd7bb7a1",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:c0cc0b411e1e",
+      "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:daf144a3a088",
+      "target": "answer_skill:2a6cec47e3f3",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:ec945e92d799",
+      "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:ff08d57446bc",
+      "target": "answer_skill:0381db05049f",
       "relation": "trains_skill",
       "confidence": "EXTRACTED"
     },

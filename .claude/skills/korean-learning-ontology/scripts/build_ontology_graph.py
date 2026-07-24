@@ -36,6 +36,12 @@ PRACTICE_ARTICLE = re.compile(
     r'<article class="answer-practice"><h3>(?P<title>.*?)</h3>',
     re.DOTALL,
 )
+IB_PRACTICE = re.compile(
+    r'<article class="literature-note"><h3>(?P<work>.*?)</h3>.*?'
+    r'<section class="ib-practice" data-skill="(?P<skill>[^"]+)"[^>]*>.*?'
+    r'<h4[^>]*>.*?(?P<question_id>KOR-MYP5-LIT-\d+).*?</h4>',
+    re.DOTALL,
+)
 
 
 def stable_id(prefix: str, label: str) -> str:
@@ -130,6 +136,20 @@ def main() -> None:
                         if creator_id not in communities[4]:
                             communities[4].append(creator_id)
                         add_edge(edges, work_id, creator_id, "created_by")
+
+        for practice in IB_PRACTICE.finditer(text):
+            work_id = stable_id("work", normalized_work_label(practice.group("work")))
+            question_id = stable_id("practice", practice.group("question_id"))
+            skill_label = practice.group("skill").strip()
+            skill_id = stable_id("answer_skill", skill_label)
+            add_node(nodes, question_id, practice.group("question_id"), "practice_question", source_file)
+            if question_id not in communities[5]:
+                communities[5].append(question_id)
+            add_node(nodes, skill_id, skill_label, "answer_skill", source_file)
+            if skill_id not in communities[5]:
+                communities[5].append(skill_id)
+            add_edge(edges, work_id, question_id, "has_practice")
+            add_edge(edges, question_id, skill_id, "trains_skill")
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
     node_list = sorted(nodes.values(), key=lambda node: (node["kind"], node["label"]))

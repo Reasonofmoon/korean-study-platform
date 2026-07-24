@@ -84,6 +84,9 @@ h3 { margin-bottom: var(--space-2); font-size: 1.125rem; }
 .study-sequence li + li { margin-top: var(--space-2); }
 .literature-note, .answer-practice { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--border); }
 .literature-note p, .answer-practice p { margin: var(--space-2) 0 0; }
+.ib-practice { margin-top: var(--space-5); padding: var(--space-4); border-radius: var(--radius); background: var(--surface-muted); }
+.ib-practice h4 { margin: 0; }
+.score-range { white-space: nowrap; }
 .ontology-actions { margin-top: var(--space-5); }
 .graphify-frame-wrap { margin-top: var(--space-6); min-height: 720px; border: 1px solid var(--border); background: var(--pine-dark); }
 .graphify-frame { display: block; width: 100%; min-height: 720px; border: 0; }
