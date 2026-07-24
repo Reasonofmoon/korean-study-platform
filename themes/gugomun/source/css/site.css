@@ -77,8 +77,7 @@ h3 { margin-bottom: var(--space-2); font-size: 1.125rem; }
 .article { max-width: 780px; }
 .article-entry { margin-top: var(--space-8); font-size: 1.0625rem; }
 .article-entry h2 { margin-top: var(--space-10); }
-.article-entry p, .article-entry li { overflow-wrap: anywhere; word-break: normal; }
-.article-entry li { overflow-wrap: normal; word-break: keep-all; }
+.article-entry p, .article-entry li { overflow-wrap: normal; word-break: keep-all; }
 .article-entry blockquote { margin: var(--space-6) 0; padding: var(--space-4) var(--space-5); border-left: 4px solid var(--gold); background: var(--surface-muted); }
 .study-sequence { margin-top: var(--space-12); padding: var(--space-6); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
 .study-sequence ol { margin: 0; padding-left: 1.4rem; }

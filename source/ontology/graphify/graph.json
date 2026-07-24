@@ -433,6 +433,12 @@
       "kind": "creator"
     },
     {
+      "id": "creator:ffadf93dc021",
+      "label": "한림 제유",
+      "file_type": "concept",
+      "kind": "creator"
+    },
+    {
       "id": "creator:917bccbfb4ec",
       "label": "한용운",
       "file_type": "concept",
@@ -517,6 +523,12 @@
       "kind": "learning_map"
     },
     {
+      "id": "map:b9e1b48f892b",
+      "label": "문학 탐색 노트",
+      "file_type": "concept",
+      "kind": "learning_map"
+    },
+    {
       "id": "map:24be3baa4313",
       "label": "문학 확장 읽기 지도",
       "file_type": "concept",
@@ -547,6 +559,12 @@
       "kind": "reading_lens"
     },
     {
+      "id": "lens:905b49fdd07d",
+      "label": "공동체와 기억",
+      "file_type": "concept",
+      "kind": "reading_lens"
+    },
+    {
       "id": "lens:a0a7b7b4e4be",
       "label": "구성",
       "file_type": "concept",
@@ -555,6 +573,12 @@
     {
       "id": "lens:a76bf2255f08",
       "label": "기록과 성찰",
+      "file_type": "concept",
+      "kind": "reading_lens"
+    },
+    {
+      "id": "lens:ac18a73c1a91",
+      "label": "말과 태도",
       "file_type": "concept",
       "kind": "reading_lens"
     },
@@ -655,8 +679,20 @@
       "kind": "reading_lens"
     },
     {
+      "id": "lens:d74fced309c7",
+      "label": "인물과 사회",
+      "file_type": "concept",
+      "kind": "reading_lens"
+    },
+    {
       "id": "lens:f7ef1a70e0d0",
       "label": "자아와 관계",
+      "file_type": "concept",
+      "kind": "reading_lens"
+    },
+    {
+      "id": "lens:e46192c037bc",
+      "label": "장면과 리듬",
       "file_type": "concept",
       "kind": "reading_lens"
     },
@@ -697,6 +733,12 @@
       "kind": "work"
     },
     {
+      "id": "work:b4c11117b8d3",
+      "label": "가는 길",
+      "file_type": "concept",
+      "kind": "work"
+    },
+    {
       "id": "work:45b7e31537e3",
       "label": "개밥바라기 별",
       "file_type": "concept",
@@ -711,6 +753,12 @@
     {
       "id": "work:b7f767241b83",
       "label": "고향",
+      "file_type": "concept",
+      "kind": "work"
+    },
+    {
+      "id": "work:ff053461c10c",
+      "label": "공무도하가",
       "file_type": "concept",
       "kind": "work"
     },
@@ -829,6 +877,12 @@
       "kind": "work"
     },
     {
+      "id": "work:0c8cadb3e4c5",
+      "label": "단군 신화",
+      "file_type": "concept",
+      "kind": "work"
+    },
+    {
       "id": "work:974ddc063813",
       "label": "도산십이곡",
       "file_type": "concept",
@@ -849,6 +903,12 @@
     {
       "id": "work:ec8a2073ca4f",
       "label": "뒤지가 진적",
+      "file_type": "concept",
+      "kind": "work"
+    },
+    {
+      "id": "work:c021d9a74201",
+      "label": "레디메이드 인생",
       "file_type": "concept",
       "kind": "work"
     },
@@ -919,6 +979,12 @@
       "kind": "work"
     },
     {
+      "id": "work:d28ef7f380d3",
+      "label": "박씨전",
+      "file_type": "concept",
+      "kind": "work"
+    },
+    {
       "id": "work:4f7cf91655df",
       "label": "백설이 ᄌᆞ자진",
       "file_type": "concept",
@@ -981,6 +1047,12 @@
     {
       "id": "work:3b8613e39259",
       "label": "사랑",
+      "file_type": "concept",
+      "kind": "work"
+    },
+    {
+      "id": "work:56d746b77a48",
+      "label": "사령",
       "file_type": "concept",
       "kind": "work"
     },
@@ -1077,6 +1149,12 @@
     {
       "id": "work:c26dca423492",
       "label": "아무도 모르라고",
+      "file_type": "concept",
+      "kind": "work"
+    },
+    {
+      "id": "work:ff41c4552982",
+      "label": "안민가",
       "file_type": "concept",
       "kind": "work"
     },
@@ -1287,6 +1365,12 @@
     {
       "id": "work:1898e16baab3",
       "label": "풀꽃",
+      "file_type": "concept",
+      "kind": "work"
+    },
+    {
+      "id": "work:5bbbc19d7bb5",
+      "label": "한림별곡",
       "file_type": "concept",
       "kind": "work"
     },
@@ -1743,6 +1827,18 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "lens:905b49fdd07d",
+      "target": "work:0c8cadb3e4c5",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:905b49fdd07d",
+      "target": "work:5bbbc19d7bb5",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "lens:9d293b9f1434",
       "target": "work:bb20e5987fc7",
       "relation": "contains_work",
@@ -1797,6 +1893,18 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "lens:ac18a73c1a91",
+      "target": "work:56d746b77a48",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:ac18a73c1a91",
+      "target": "work:ff41c4552982",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "lens:ce66d935e27b",
       "target": "work:15f196530f45",
       "relation": "contains_work",
@@ -1835,6 +1943,30 @@
     {
       "source": "lens:d36c1e513def",
       "target": "work:ec8a2073ca4f",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:d74fced309c7",
+      "target": "work:c021d9a74201",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:d74fced309c7",
+      "target": "work:d28ef7f380d3",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:e46192c037bc",
+      "target": "work:b4c11117b8d3",
+      "relation": "contains_work",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "lens:e46192c037bc",
+      "target": "work:ff053461c10c",
       "relation": "contains_work",
       "confidence": "EXTRACTED"
     },
@@ -2163,6 +2295,12 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:56d746b77a48",
+      "target": "creator:b6271ab36c8a",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:573960473903",
       "target": "creator:0c501c5f50ae",
       "relation": "created_by",
@@ -2171,6 +2309,12 @@
     {
       "source": "work:592ba820d75f",
       "target": "creator:c679ea59ee9c",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:5bbbc19d7bb5",
+      "target": "creator:ffadf93dc021",
       "relation": "created_by",
       "confidence": "EXTRACTED"
     },
@@ -2325,6 +2469,12 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:b4c11117b8d3",
+      "target": "creator:b81a4adfbcf4",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:b750e7760b6f",
       "target": "creator:221867d8272c",
       "relation": "created_by",
@@ -2363,6 +2513,12 @@
     {
       "source": "work:c013efb3ebef",
       "target": "creator:9c873a1f1184",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:c021d9a74201",
+      "target": "creator:76ffdab57cc4",
       "relation": "created_by",
       "confidence": "EXTRACTED"
     },
@@ -2535,6 +2691,12 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:ff41c4552982",
+      "target": "creator:f75f4cfc1c4f",
+      "relation": "created_by",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "path:high-2028",
       "target": "map:24be3baa4313",
       "relation": "has_map",
@@ -2549,6 +2711,12 @@
     {
       "source": "path:high-2028",
       "target": "map:28cc10033095",
+      "relation": "has_map",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "path:high-2028",
+      "target": "map:b9e1b48f892b",
       "relation": "has_map",
       "confidence": "EXTRACTED"
     },
@@ -2717,6 +2885,30 @@
     {
       "source": "map:28cc10033095",
       "target": "lens:d5ce088d01e0",
+      "relation": "uses_lens",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "map:b9e1b48f892b",
+      "target": "lens:905b49fdd07d",
+      "relation": "uses_lens",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "map:b9e1b48f892b",
+      "target": "lens:ac18a73c1a91",
+      "relation": "uses_lens",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "map:b9e1b48f892b",
+      "target": "lens:d74fced309c7",
+      "relation": "uses_lens",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "map:b9e1b48f892b",
+      "target": "lens:e46192c037bc",
       "relation": "uses_lens",
       "confidence": "EXTRACTED"
     },

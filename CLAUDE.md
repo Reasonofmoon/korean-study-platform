@@ -15,3 +15,4 @@
 | 2026-07-23 | 문학 확장 읽기 지도 추가 | literature-reading-3 | HWP 목차의 공개 메타정보를 독립 읽기 노트와 온톨로지로 통합 |
 | 2026-07-24 | 문학 심화 읽기 지도 추가 | literature-reading-4 | HWP 목차의 공개 메타정보를 독립 MECE 노트와 온톨로지로 통합 |
 | 2026-07-24 | 서술형 답안 훈련 추가 | descriptive-response | HWP 형식 메타정보를 독립 연습과 온톨로지 역량으로 통합 |
+| 2026-07-24 | 전체 자료 메타데이터 감사 및 탐색 노트 추가 | literature-exploration | HWP·ZIP 자료를 독립 MECE 카드와 온톨로지로 단계 통합 |

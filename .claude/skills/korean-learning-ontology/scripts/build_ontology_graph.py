@@ -23,6 +23,7 @@ GUIDES = [
     SOURCE / "high-2028" / "literature-reading-2" / "index.md",
     SOURCE / "high-2028" / "literature-reading-3" / "index.md",
     SOURCE / "high-2028" / "literature-reading-4" / "index.md",
+    SOURCE / "high-2028" / "literature-exploration" / "index.md",
     SOURCE / "high-2028" / "descriptive-response" / "index.md",
 ]
 HEADING = re.compile(r"^##\s+\d+\.\s+(.+?)\s+·\s+\d+(?:편|개)\s*$", re.MULTILINE)
@@ -54,7 +55,7 @@ def creator_names(value: str) -> list[str]:
     names = []
     for item in value.split("·"):
         name = re.sub(r"\s+(원작|그림|바디|옮김|각색)$", "", item.strip())
-        if name and name != "작자 미상":
+        if name and name not in {"작자 미상", "전승"}:
             names.append(name)
     return names
 

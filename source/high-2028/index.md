@@ -16,6 +16,8 @@ curriculum_links:
     label: 문학 확장 지도 보기
   - path: /high-2028/literature-reading-4/
     label: 문학 심화 읽기 지도 보기
+  - path: /high-2028/literature-exploration/
+    label: 문학 탐색 노트 보기
   - path: /high-2028/descriptive-response/
     label: 서술형 답안 훈련 보기
 subjects:

@@ -49,8 +49,7 @@ test("separates multiple curriculum links at every viewport", () => {
 test("wraps Korean reading content without horizontal clipping", () => {
   const css = readTheme(path.join("source", "css", "site.css"));
 
-  assert.match(css, /\.article-entry p, \.article-entry li \{ overflow-wrap: anywhere; word-break: normal; \}/);
-  assert.match(css, /\.article-entry li \{ overflow-wrap: normal; word-break: keep-all; \}/);
+  assert.match(css, /\.article-entry p, \.article-entry li \{ overflow-wrap: normal; word-break: keep-all; \}/);
 });
 
 test("publishes a 13-note Common Korean I learning map", () => {
@@ -124,6 +123,18 @@ test("publishes a MECE literature deep-reading map without source structure", ()
   assert.doesNotMatch(guide, /천재|문학과 삶|문학의 수용과 생산/);
 });
 
+test("publishes an independently arranged literature exploration map", () => {
+  const guide = readGenerated(path.join("high-2028", "literature-exploration", "index.html"));
+
+  assert.match(guide, /문학 탐색 노트/);
+  assert.equal((guide.match(/class="literature-note"/g) || []).length, 8);
+  assert.match(guide, /장면과 리듬/);
+  assert.match(guide, /인물과 사회/);
+  assert.match(guide, /말과 태도/);
+  assert.match(guide, /공동체와 기억/);
+  assert.doesNotMatch(guide, /선비모음|1단원|2단원|출판사/);
+});
+
 test("publishes an original eight-step descriptive-response practice map", () => {
   const guide = readGenerated(path.join("high-2028", "descriptive-response", "index.html"));
 
@@ -142,7 +153,7 @@ test("publishes a Graphify ontology with works, lenses, and creators", () => {
   assert.match(page, /ontology\/graphify\/graph\.html/);
   const works = graph.nodes.filter((node) => node.kind === "work");
 
-  assert.equal(works.length, 105);
+  assert.equal(works.length, 113);
   assert.equal(works.filter((node) => node.label.replace(/\s+/g, "") === "봉산탈춤").length, 1);
   assert.ok(graph.edges.some((edge) => edge.relation === "contains_work"));
   assert.ok(graph.edges.some((edge) => edge.relation === "created_by"));
