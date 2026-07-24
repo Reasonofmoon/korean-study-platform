@@ -595,6 +595,84 @@
       "kind": "practice_question"
     },
     {
+      "id": "practice:c2533617ccac",
+      "label": "KOR-MYP5-LIT-101",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:fa47abdb3c6e",
+      "label": "KOR-MYP5-LIT-102",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:5d3a264d85d3",
+      "label": "KOR-MYP5-LIT-103",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:dd83dfc75d6d",
+      "label": "KOR-MYP5-LIT-104",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:ced1514707dc",
+      "label": "KOR-MYP5-LIT-105",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:07362f02dcff",
+      "label": "KOR-MYP5-LIT-106",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:709fcdb267fd",
+      "label": "KOR-MYP5-LIT-107",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:86510b1422b6",
+      "label": "KOR-MYP5-LIT-108",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:ce310a7fcc69",
+      "label": "KOR-MYP5-LIT-109",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:f061d97e3f07",
+      "label": "KOR-MYP5-LIT-110",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:89d16b202fae",
+      "label": "KOR-MYP5-LIT-111",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:4e98b2dff578",
+      "label": "KOR-MYP5-LIT-112",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
+      "id": "practice:191ed6b40c28",
+      "label": "KOR-MYP5-LIT-113",
+      "file_type": "concept",
+      "kind": "practice_question"
+    },
+    {
       "id": "lens:f86da1fa1024",
       "label": "감각과 정서",
       "file_type": "concept",
@@ -2787,6 +2865,24 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:1b5184fb208c",
+      "target": "practice:89d16b202fae",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:20de5699ecfa",
+      "target": "practice:ce310a7fcc69",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:28c3c26cd973",
+      "target": "practice:4e98b2dff578",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:56d746b77a48",
       "target": "practice:a654c760c9f9",
       "relation": "has_practice",
@@ -2795,6 +2891,24 @@
     {
       "source": "work:5bbbc19d7bb5",
       "target": "practice:ff08d57446bc",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:9fda369c0bbc",
+      "target": "practice:5d3a264d85d3",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:a06afa4e4735",
+      "target": "practice:c2533617ccac",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:b29953ac2573",
+      "target": "practice:07362f02dcff",
       "relation": "has_practice",
       "confidence": "EXTRACTED"
     },
@@ -2811,8 +2925,50 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "work:cd0b6501b534",
+      "target": "practice:dd83dfc75d6d",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "work:d28ef7f380d3",
       "target": "practice:499295417e34",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:d335624180c4",
+      "target": "practice:86510b1422b6",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:df8674e9e9a0",
+      "target": "practice:fa47abdb3c6e",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:e0ea5f032191",
+      "target": "practice:709fcdb267fd",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:e2470628bc7c",
+      "target": "practice:ced1514707dc",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:e8fad98b248b",
+      "target": "practice:f061d97e3f07",
+      "relation": "has_practice",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "work:f5442864a7b8",
+      "target": "practice:191ed6b40c28",
       "relation": "has_practice",
       "confidence": "EXTRACTED"
     },
@@ -2883,8 +3039,50 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "practice:07362f02dcff",
+      "target": "answer_skill:3599bd7bb7a1",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:191ed6b40c28",
+      "target": "answer_skill:3599bd7bb7a1",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "practice:499295417e34",
       "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:4e98b2dff578",
+      "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:5d3a264d85d3",
+      "target": "answer_skill:3599bd7bb7a1",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:709fcdb267fd",
+      "target": "answer_skill:2a6cec47e3f3",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:86510b1422b6",
+      "target": "answer_skill:4646839b0e8d",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:89d16b202fae",
+      "target": "answer_skill:3599bd7bb7a1",
       "relation": "trains_skill",
       "confidence": "EXTRACTED"
     },
@@ -2907,13 +3105,49 @@
       "confidence": "EXTRACTED"
     },
     {
+      "source": "practice:c2533617ccac",
+      "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:ce310a7fcc69",
+      "target": "answer_skill:0381db05049f",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:ced1514707dc",
+      "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "practice:daf144a3a088",
       "target": "answer_skill:2a6cec47e3f3",
       "relation": "trains_skill",
       "confidence": "EXTRACTED"
     },
     {
+      "source": "practice:dd83dfc75d6d",
+      "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
       "source": "practice:ec945e92d799",
+      "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:f061d97e3f07",
+      "target": "answer_skill:120386256f9b",
+      "relation": "trains_skill",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "practice:fa47abdb3c6e",
       "target": "answer_skill:120386256f9b",
       "relation": "trains_skill",
       "confidence": "EXTRACTED"

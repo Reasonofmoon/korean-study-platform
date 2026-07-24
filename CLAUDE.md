@@ -18,3 +18,4 @@
 | 2026-07-24 | 전체 자료 메타데이터 감사 및 탐색 노트 추가 | literature-exploration | HWP·ZIP 자료를 독립 MECE 카드와 온톨로지로 단계 통합 |
 | 2026-07-24 | 첫 IB 방식 창작 문항 추가 | literature-exploration | 작품별 독립 분석 문항을 단계적으로 확장 |
 | 2026-07-24 | 탐색 지도 문항·논술 메모 8편 확장 | literature-exploration, graphify | 작품별 창작 연습과 역량 관계를 공개 메타정보로 연결 |
+| 2026-07-24 | 문학 34편 첫 문항·논술 메모 13편 확장 | literature-2015, graphify | 작품별 독립 창작 연습과 역량 관계를 단계 통합 |

@@ -150,6 +150,17 @@ test("publishes eight independent MYP-style literature practices", () => {
   assert.equal((guide.match(/data-disclosure="not-affiliated"/g) || []).length, 8);
 });
 
+test("publishes a first independent practice batch for 문학 34편 읽기 지도", () => {
+  const guide = readGenerated(path.join("high-2028", "literature-2015", "index.html"));
+  const practices = guide.match(/<section class="ib-practice"[\s\S]*?<\/section>/g) || [];
+
+  assert.equal(practices.length, 13);
+  assert.equal((guide.match(/KOR-MYP5-LIT-1\d\d/g) || []).length, 13);
+  assert.equal((guide.match(/data-origin="independent"/g) || []).length, 13);
+  assert.equal((guide.match(/data-disclosure="not-affiliated"/g) || []).length, 13);
+  assert.doesNotMatch(practices.join(""), /출판사|1단원|2단원/);
+});
+
 test("publishes an original eight-step descriptive-response practice map", () => {
   const guide = readGenerated(path.join("high-2028", "descriptive-response", "index.html"));
 
@@ -173,12 +184,14 @@ test("publishes a Graphify ontology with works, lenses, and creators", () => {
   assert.ok(graph.edges.some((edge) => edge.relation === "contains_work"));
   assert.ok(graph.edges.some((edge) => edge.relation === "created_by"));
   assert.equal(graph.nodes.filter((node) => node.kind === "answer_skill").length, 8);
-  assert.equal(graph.nodes.filter((node) => node.kind === "practice_question").length, 8);
-  assert.equal(graph.edges.filter((edge) => edge.relation === "has_practice").length, 8);
-  assert.equal(graph.edges.length, 277);
+  assert.equal(graph.nodes.filter((node) => node.kind === "practice_question").length, 21);
+  assert.equal(graph.edges.filter((edge) => edge.relation === "has_practice").length, 21);
+  assert.equal(graph.edges.length, 303);
   assert.ok(graph.edges.some((edge) => edge.relation === "trains_skill"));
   assert.doesNotMatch(JSON.stringify(graph), /source\/high-2028|출판사|1단원|정답|해설|선택지|자료 위치/);
   assert.match(graphHtml, /vis-network/);
+  assert.match(graphHtml, /<html lang="ko">/);
+  assert.match(graphHtml, /<meta name="viewport" content="width=device-width, initial-scale=1">/);
   assert.doesNotMatch(graphHtml, /layout-page/);
   assert.doesNotMatch(graphHtml, /C:\\\\Users\\\\/);
   assert.match(graphHtml, /@media \(max-width: 760px\)/);

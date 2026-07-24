@@ -219,6 +219,8 @@ def main() -> None:
         "</script>\n"
     )
     rendered_html = temp_html.read_text(encoding="utf-8")
+    rendered_html = rendered_html.replace('<html lang="en">', '<html lang="ko">', 1)
+    rendered_html = rendered_html.replace('<meta charset="UTF-8">', '<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">', 1)
     rendered_html = re.sub(r"<title>graphify - .*?</title>", "<title>학습 온톨로지 그래프</title>", rendered_html, count=1)
     rendered_html = rendered_html.replace("</style>", mobile_css + theme_css + "</style>", 1)
     temp_html.write_text(rendered_html.replace("</body>", theme_script + "</body>", 1), encoding="utf-8")
