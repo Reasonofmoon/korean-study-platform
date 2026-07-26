@@ -48,8 +48,16 @@ test("separates multiple curriculum links at every viewport", () => {
 
 test("wraps Korean reading content without horizontal clipping", () => {
   const css = readTheme(path.join("source", "css", "site.css"));
+  const postLayout = readTheme(path.join("layout", "post.ejs"));
 
+  assert.match(css, /\.outer \{ width: min\(calc\(100% - 32px\), 1120px\); \}/);
   assert.match(css, /\.article-entry p, \.article-entry li \{ overflow-wrap: normal; word-break: keep-all; \}/);
+  assert.match(css, /\.article-header h1 \{ font-size: 1\.75rem; \}/);
+  assert.match(css, /\.study-sequence \{ padding: var\(--space-4\); \}/);
+  assert.match(postLayout, /class="article article-<%= page\.level %>"/);
+  assert.match(postLayout, /var mobileBreak = page\.level === 'elementary'/);
+  assert.match(css, /\.mobile-break \{ display: none; \}/);
+  assert.match(css, /\.article-elementary \.mobile-break \{ display: block; \}/);
 });
 
 test("publishes a 13-note Common Korean I learning map", () => {
@@ -67,6 +75,16 @@ test("publishes a 13-note Common Korean I learning map", () => {
   assert.match(map, /언어 지식과 상호작용/);
   assert.match(map, /논증과 공동체 글쓰기/);
   notes.forEach((slug) => assert.doesNotThrow(() => readGenerated(path.join("lessons", `common-korean-1-${slug}`, "index.html"))));
+});
+
+test("publishes a curated four-step elementary literacy path", () => {
+  const elementary = readGenerated(path.join("elementary", "index.html"));
+
+  assert.equal((elementary.match(/data-lesson data-subject/g) || []).length, 4);
+  ["elementary-sound-letter", "elementary-word-meaning", "elementary-main-message", "elementary-story-sequence"].forEach((slug) => {
+    assert.doesNotThrow(() => readGenerated(path.join("lessons", slug, "index.html")));
+  });
+  assert.doesNotMatch(elementary, /에듀넷|Edunet/);
 });
 
 test("publishes a 34-work literature reading map without copied source text", () => {

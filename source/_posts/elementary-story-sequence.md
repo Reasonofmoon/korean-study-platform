@@ -4,7 +4,7 @@ description: 사건이 어떻게 이어지는지 세 장면으로 정리하며 �
 level: elementary
 subject: 이야기
 subject_key: story
-sequence: 1
+sequence: 4
 study_time: 15분
 status: 학습 가능
 ---
@@ -22,3 +22,7 @@ status: 학습 가능
 ## 표현 활동
 
 세 장면을 각각 한 문장으로 적고, 세 문장을 이어 자신의 말로 이야기를 들려주세요.
+
+## 다음 전달
+
+누가 들을지 한 사람을 정한 뒤, 그 사람이 이해하기 쉽도록 가장 중요한 장면 하나를 덧붙여 보세요.

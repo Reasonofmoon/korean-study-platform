@@ -82,6 +82,7 @@ h3 { margin-bottom: var(--space-2); font-size: 1.125rem; }
 .study-sequence { margin-top: var(--space-12); padding: var(--space-6); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
 .study-sequence ol { margin: 0; padding-left: 1.4rem; }
 .study-sequence li + li { margin-top: var(--space-2); }
+.mobile-break { display: none; }
 .literature-note, .answer-practice { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--border); }
 .literature-note p, .answer-practice p { margin: var(--space-2) 0 0; }
 .ib-practice { margin-top: var(--space-5); padding: var(--space-4); border-radius: var(--radius); background: var(--surface-muted); }
@@ -95,12 +96,15 @@ h3 { margin-bottom: var(--space-2); font-size: 1.125rem; }
 .site-footer p { margin: var(--space-1) 0 0; color: var(--pine-soft); font-size: .875rem; }
 
 @media (max-width: 760px) {
-  .outer { width: min(100% - 32px, 1120px); }
+  .outer { width: min(calc(100% - 32px), 1120px); }
   .header-inner { align-items: flex-start; flex-direction: column; padding: var(--space-4) 0; }
   .primary-nav { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: var(--space-1); }
   .primary-nav a { white-space: nowrap; }
   .site-main { padding-block: var(--space-10); }
   .hero { padding-block: var(--space-6); }
+  .article-header h1 { font-size: 1.75rem; }
+  .study-sequence { padding: var(--space-4); }
+  .article-elementary .mobile-break { display: block; }
   .path-grid { grid-template-columns: 1fr; }
   .path-card { min-height: 0; }
   .lesson-row { grid-template-columns: 36px minmax(0, 1fr); gap: var(--space-3); }
