@@ -87,6 +87,17 @@ test("publishes a curated four-step elementary literacy path", () => {
   assert.doesNotMatch(elementary, /에듀넷|Edunet/);
 });
 
+test("gives every elementary literacy lesson original practice and assessment material", () => {
+  ["elementary-sound-letter", "elementary-word-meaning", "elementary-main-message", "elementary-story-sequence"].forEach((slug) => {
+    const lesson = readGenerated(path.join("lessons", slug, "index.html"));
+
+    assert.match(lesson, /오늘의 학습 자료/);
+    assert.match(lesson, /미니 평가/);
+    assert.match(lesson, /채점 기준/);
+    assert.doesNotMatch(lesson, /에듀넷|Edunet/);
+  });
+});
+
 test("publishes a 34-work literature reading map without copied source text", () => {
   const guide = readGenerated(path.join("high-2028", "literature-2015", "index.html"));
 
